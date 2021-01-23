@@ -98,26 +98,6 @@ async function formatSameAsPrettier(
 
 suite("Test format Document", function () {
   this.timeout(10000);
-  test("it formats JavaScript", () =>
-    formatSameAsPrettier("formatTest/ugly.js"));
-  test("it formats TypeScript", () =>
-    formatSameAsPrettier("formatTest/ugly.ts"));
-  test("it formats CSS", () => formatSameAsPrettier("formatTest/ugly.css"));
-  test("it formats JSON", () => formatSameAsPrettier("formatTest/ugly.json"));
-  test("it formats JSONC", () =>
-    formatSameAsPrettier("formatTest/ugly.jsonc", { parser: "json" }));
-  test("it formats JSON", () =>
-    formatSameAsPrettier("formatTest/package.json"));
-  test("it formats HTML", () => formatSameAsPrettier("formatTest/ugly.html"));
-  test("it formats LWC", () =>
-    formatSameAsPrettier("formatTest/lwc.html", { parser: "lwc" }));
-  test("it formats TSX", () => formatSameAsPrettier("formatTest/ugly.tsx"));
-  test("it formats SCSS", () => formatSameAsPrettier("formatTest/ugly.scss"));
-  test("it formats GraphQL", () =>
-    formatSameAsPrettier("formatTest/ugly.graphql"));
-  test("it formats HTML with literals", () =>
-    formatSameAsPrettier("formatTest/htmlWithLiterals.html"));
-  test("it formats Vue", () => formatSameAsPrettier("formatTest/ugly.vue"));
   test("it formats Handlebars", () =>
     formatSameAsPrettier("formatTest/ugly.hbs", { parser: "glimmer" }));
 });
