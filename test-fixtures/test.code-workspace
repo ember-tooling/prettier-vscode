@@ -32,61 +32,6 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars",
-    "[javascript]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[javascriptreact]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[jsonc]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[json5]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[postcss]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[less]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[scss]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[graphql]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[markdown]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[mdx]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[html]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[vue]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[yaml]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
-    "[php]": {
-      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
-    },
     "[handlebars]": {
       "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
