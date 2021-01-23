@@ -52,14 +52,7 @@ export class LanguageResolver {
   }
 
   public getRangeSupportedLanguages(): string[] {
-    return [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "json",
-      "graphql",
-    ];
+    return [];
   }
 
   public async getSupportedFileExtensions() {
