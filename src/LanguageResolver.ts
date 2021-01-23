@@ -2,6 +2,17 @@ import * as prettier from "prettier";
 import { Uri } from "vscode";
 import { ModuleResolver } from "./ModuleResolver";
 
+const Handlebars = {
+  name: "Handlebars",
+  type: "markup",
+  color: "#f7931e",
+  aliases: ["hbs", "htmlbars"],
+  extensions: [".handlebars", ".hbs"],
+  tmScope: "text.html.handlebars",
+  aceMode: "handlebars",
+  languageId: 155,
+};
+
 export class LanguageResolver {
   constructor(private moduleResolver: ModuleResolver) {}
   public async getParserFromLanguageId(
@@ -69,6 +80,30 @@ export class LanguageResolver {
     const prettierInstance = await this.moduleResolver.getPrettierInstance(
       fsPath
     );
-    return prettierInstance.getSupportInfo().languages;
+    const languages = prettierInstance.getSupportInfo().languages;
+
+    const hLang = this.createLanguage(Handlebars, () => ({
+      since: null,
+      parsers: ["glimmer"],
+      vscodeLanguageIds: ["handlebars"],
+    }));
+    languages.push(hLang);
+
+    return languages;
+  }
+
+  private createLanguage(
+    linguistData: { [x: string]: any; languageId: any },
+    override: {
+      (): { since: null; parsers: string[]; vscodeLanguageIds: string[] };
+      (arg0: any): any;
+    }
+  ): prettier.SupportLanguage {
+    const { languageId, ...rest } = linguistData;
+    return {
+      linguistLanguageId: languageId,
+      ...rest,
+      ...override(linguistData),
+    };
   }
 }
