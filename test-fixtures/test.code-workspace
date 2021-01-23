@@ -32,64 +32,67 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars",
     "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[javascriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[json5]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[css]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[postcss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[less]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[scss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[graphql]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[markdown]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[mdx]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[vue]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[yaml]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
     "[php]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
     },
-    "prettier.trailingComma": "all",
-    "prettier.prettierPath": "",
-    "prettier.documentSelectors": [
+    "[handlebars]": {
+      "editor.defaultFormatter": "ember-tooling.prettier-vscode-handlebars"
+    },
+    "prettier-hbs.trailingComma": "all",
+    "prettier-hbs.prettierPath": "",
+    "prettier-hbs.documentSelectors": [
       "**/*.abc"
     ],
   }

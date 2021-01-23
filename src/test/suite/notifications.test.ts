@@ -36,7 +36,7 @@ suite("Test notifications", function () {
   });
 
   test("shows error for invalid prettier instance", async () => {
-    const settings = workspace.getConfiguration("prettier");
+    const settings = workspace.getConfiguration("prettier-hbs");
     const originalPrettierPath = settings.get("prettierPath");
     if (isWindows()) {
       // On windows the file in the bin won't be a JS file, so test against

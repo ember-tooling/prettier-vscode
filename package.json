@@ -1,22 +1,22 @@
 {
-  "name": "prettier-vscode",
-  "displayName": "Prettier - Code formatter",
-  "description": "Code formatter using prettier",
+  "name": "prettier-vscode-handlebars",
+  "displayName": "Prettier - Code formatter (For Handlebars)",
+  "description": "Code formatter using prettier (For Handlebars)",
   "version": "5.8.0",
-  "publisher": "esbenp",
-  "author": "Prettier <@prettiercode>",
+  "publisher": "ember-tooling",
+  "author": "Alon Bukai <alonzorz@gmail.com>",
   "galleryBanner": {
     "color": "#ffe04b",
     "theme": "light"
   },
-  "homepage": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=ember-tooling.prettier-vscode-handlebars",
   "repository": {
     "type": "git",
-    "url": "https://github.com/prettier/prettier-vscode.git"
+    "url": "https://github.com/ember-tooling/prettier-vscode.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prettier/prettier-vscode/issues"
+    "url": "https://github.com/ember-tooling/prettier-vscode/issues"
   },
   "engines": {
     "vscode": "^1.46.0"
@@ -25,32 +25,8 @@
     "multi-root ready",
     "prettier",
     "formatter",
-    "javascript",
-    "js",
-    "jsx",
-    "flow",
-    "typescript",
-    "ts",
-    "json",
-    "css",
-    "less",
-    "scss",
-    "styled-components",
-    "styled-jsx",
-    "markdown",
-    "md",
-    "commonmark",
-    "mdx",
-    "php",
-    "pug",
-    "ruby",
-    "swift",
-    "html",
-    "vue",
-    "angular",
-    "graphql",
-    "yaml",
-    "yml"
+    "handlebars",
+    "glimmer"
   ],
   "categories": [
     "Formatters"
@@ -128,7 +104,7 @@
       "type": "object",
       "title": "%ext.config.title%",
       "properties": {
-        "prettier.disableLanguages": {
+        "prettier-hbs.disableLanguages": {
           "type": "array",
           "items": {
             "type": "string"
@@ -136,7 +112,7 @@
           "markdownDescription": "%ext.config.disableLanguages%",
           "scope": "window"
         },
-        "prettier.documentSelectors": {
+        "prettier-hbs.documentSelectors": {
           "type": "array",
           "items": {
             "type": "string"
@@ -144,71 +120,71 @@
           "markdownDescription": "%ext.config.documentSelectors%",
           "scope": "window"
         },
-        "prettier.enable": {
+        "prettier-hbs.enable": {
           "type": "boolean",
           "default": true,
           "markdownDescription": "%ext.config.enable%",
           "scope": "resource"
         },
-        "prettier.requireConfig": {
+        "prettier-hbs.requireConfig": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.requireConfig%",
           "scope": "resource"
         },
-        "prettier.resolveGlobalModules": {
+        "prettier-hbs.resolveGlobalModules": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.resolveGlobalModules%",
           "scope": "resource"
         },
-        "prettier.withNodeModules": {
+        "prettier-hbs.withNodeModules": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.withNodeModules%",
           "scope": "resource"
         },
-        "prettier.useEditorConfig": {
+        "prettier-hbs.useEditorConfig": {
           "type": "boolean",
           "default": true,
           "markdownDescription": "%ext.config.useEditorConfig%",
           "scope": "resource"
         },
-        "prettier.ignorePath": {
+        "prettier-hbs.ignorePath": {
           "type": "string",
           "default": ".prettierignore",
           "markdownDescription": "%ext.config.ignorePath%",
           "scope": "resource"
         },
-        "prettier.prettierPath": {
+        "prettier-hbs.prettierPath": {
           "type": "string",
           "markdownDescription": "%ext.config.prettierPath%",
           "scope": "resource"
         },
-        "prettier.configPath": {
+        "prettier-hbs.configPath": {
           "type": "string",
           "markdownDescription": "%ext.config.configPath%",
           "scope": "resource"
         },
-        "prettier.printWidth": {
+        "prettier-hbs.printWidth": {
           "type": "integer",
           "default": 80,
           "markdownDescription": "%ext.config.printWidth%",
           "scope": "resource"
         },
-        "prettier.tabWidth": {
+        "prettier-hbs.tabWidth": {
           "type": "integer",
           "default": 2,
           "markdownDescription": "%ext.config.tabWidth%",
           "scope": "resource"
         },
-        "prettier.singleQuote": {
+        "prettier-hbs.singleQuote": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.singleQuote%",
           "scope": "resource"
         },
-        "prettier.trailingComma": {
+        "prettier-hbs.trailingComma": {
           "type": "string",
           "enum": [
             "none",
@@ -219,43 +195,43 @@
           "markdownDescription": "%ext.config.trailingComma%",
           "scope": "resource"
         },
-        "prettier.bracketSpacing": {
+        "prettier-hbs.bracketSpacing": {
           "type": "boolean",
           "default": true,
           "markdownDescription": "%ext.config.bracketSpacing%",
           "scope": "resource"
         },
-        "prettier.jsxBracketSameLine": {
+        "prettier-hbs.jsxBracketSameLine": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.jsxBracketSameLine%",
           "scope": "resource"
         },
-        "prettier.semi": {
+        "prettier-hbs.semi": {
           "type": "boolean",
           "default": true,
           "markdownDescription": "%ext.config.semi%",
           "scope": "resource"
         },
-        "prettier.requirePragma": {
+        "prettier-hbs.requirePragma": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.requirePragma%",
           "scope": "resource"
         },
-        "prettier.insertPragma": {
+        "prettier-hbs.insertPragma": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.insertPragma%",
           "scope": "resource"
         },
-        "prettier.useTabs": {
+        "prettier-hbs.useTabs": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.useTabs%",
           "scope": "resource"
         },
-        "prettier.proseWrap": {
+        "prettier-hbs.proseWrap": {
           "type": "string",
           "enum": [
             "preserve",
@@ -266,7 +242,7 @@
           "markdownDescription": "%ext.config.proseWrap%",
           "scope": "resource"
         },
-        "prettier.arrowParens": {
+        "prettier-hbs.arrowParens": {
           "type": "string",
           "enum": [
             "avoid",
@@ -276,13 +252,13 @@
           "markdownDescription": "%ext.config.arrowParens%",
           "scope": "resource"
         },
-        "prettier.jsxSingleQuote": {
+        "prettier-hbs.jsxSingleQuote": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.jsxSingleQuote%",
           "scope": "resource"
         },
-        "prettier.htmlWhitespaceSensitivity": {
+        "prettier-hbs.htmlWhitespaceSensitivity": {
           "type": "string",
           "enum": [
             "css",
@@ -293,13 +269,13 @@
           "markdownDescription": "%ext.config.htmlWhitespaceSensitivity%",
           "scope": "resource"
         },
-        "prettier.vueIndentScriptAndStyle": {
+        "prettier-hbs.vueIndentScriptAndStyle": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "%ext.config.vueIndentScriptAndStyle%",
           "scope": "resource"
         },
-        "prettier.endOfLine": {
+        "prettier-hbs.endOfLine": {
           "type": "string",
           "enum": [
             "auto",
@@ -311,7 +287,7 @@
           "markdownDescription": "%ext.config.endOfLine%",
           "scope": "resource"
         },
-        "prettier.quoteProps": {
+        "prettier-hbs.quoteProps": {
           "type": "string",
           "enum": [
             "as-needed",
@@ -322,7 +298,7 @@
           "markdownDescription": "%ext.config.quoteProps%",
           "scope": "resource"
         },
-        "prettier.embeddedLanguageFormatting": {
+        "prettier-hbs.embeddedLanguageFormatting": {
           "type": "string",
           "enum": [
             "auto",
@@ -360,23 +336,11 @@
         "filenames": [
           ".prettierignore"
         ]
-      },
-      {
-        "id": "graphql",
-        "extensions": [
-          ".graphql"
-        ]
-      },
-      {
-        "id": "vue",
-        "extensions": [
-          ".vue"
-        ]
       }
     ],
     "commands": [
       {
-        "command": "prettier.createConfigFile",
+        "command": "prettier-hbs.createConfigFile",
         "title": "%ext.command.createConfigFile.title%"
       }
     ]
