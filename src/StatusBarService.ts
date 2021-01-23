@@ -68,11 +68,8 @@ export class StatusBarService {
 
       this.loggingService.setOutputLevel("NONE"); // No logs here, they are annoying.
 
-      const filePath = editor.document.isUntitled
-        ? undefined
-        : editor.document.fileName;
       const score = languages.match(
-        await this.languageResolver.getSupportedLanguages(filePath),
+        await this.languageResolver.getSupportedLanguages(),
         editor.document
       );
       const disabledLanguages: PrettierVSCodeConfig["disableLanguages"] = getConfig(

@@ -126,10 +126,9 @@ export default class PrettierEditService implements Disposable {
       allLanguages = await this.languageResolver.getSupportedLanguages();
     } else {
       allLanguages = [];
-      for (const folder of workspace.workspaceFolders) {
-        const allWorkspaceLanguages = await this.languageResolver.getSupportedLanguages(
-          folder.uri.fsPath
-        );
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      for (const _folder of workspace.workspaceFolders) {
+        const allWorkspaceLanguages = await this.languageResolver.getSupportedLanguages();
         allWorkspaceLanguages.forEach((lang) => {
           if (!allLanguages.includes(lang)) {
             allLanguages.push(lang);
@@ -143,10 +142,9 @@ export default class PrettierEditService implements Disposable {
       allExtensions = await this.languageResolver.getSupportedFileExtensions();
     } else {
       allExtensions = [];
-      for (const folder of workspace.workspaceFolders) {
-        const allWorkspaceLanguages = await this.languageResolver.getSupportedFileExtensions(
-          folder.uri.fsPath
-        );
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      for (const _folder of workspace.workspaceFolders) {
+        const allWorkspaceLanguages = await this.languageResolver.getSupportedFileExtensions();
         allWorkspaceLanguages.forEach((lang) => {
           if (!allExtensions.includes(lang)) {
             allExtensions.push(lang);

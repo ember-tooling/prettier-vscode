@@ -59,7 +59,7 @@ export function activate(context: ExtensionContext) {
     notificationService
   );
 
-  const languageResolver = new LanguageResolver(moduleResolver);
+  const languageResolver = new LanguageResolver();
 
   const statusBarService = new StatusBarService(
     languageResolver,

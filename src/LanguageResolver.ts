@@ -1,6 +1,5 @@
 import * as prettier from "prettier";
 import { Uri } from "vscode";
-import { ModuleResolver } from "./ModuleResolver";
 
 const Handlebars = {
   name: "Handlebars",
@@ -14,7 +13,6 @@ const Handlebars = {
 };
 
 export class LanguageResolver {
-  constructor(private moduleResolver: ModuleResolver) {}
   public async getParserFromLanguageId(
     uri: Uri,
     languageId: string
@@ -29,7 +27,7 @@ export class LanguageResolver {
     if (uri.scheme === "untitled" && languageParsers.includes(languageId)) {
       return languageId;
     }
-    const language = (await this.getSupportLanguages(uri.fsPath)).find(
+    const language = (await this.getSupportLanguages()).find(
       (lang) =>
         lang &&
         lang.extensions &&
@@ -41,9 +39,9 @@ export class LanguageResolver {
     }
   }
 
-  public async getSupportedLanguages(fsPath?: string): Promise<string[]> {
+  public async getSupportedLanguages(): Promise<string[]> {
     const enabledLanguages: string[] = [];
-    (await this.getSupportLanguages(fsPath)).forEach((lang) => {
+    (await this.getSupportLanguages()).forEach((lang) => {
       if (lang && lang.vscodeLanguageIds) {
         enabledLanguages.push(...lang.vscodeLanguageIds);
       }
@@ -64,9 +62,9 @@ export class LanguageResolver {
     ];
   }
 
-  public async getSupportedFileExtensions(fsPath?: string) {
+  public async getSupportedFileExtensions() {
     const extensions: string[] = [];
-    (await this.getSupportLanguages(fsPath)).forEach((lang) => {
+    (await this.getSupportLanguages()).forEach((lang) => {
       if (lang && lang.extensions) {
         extensions.push(...lang.extensions);
       }
@@ -76,22 +74,17 @@ export class LanguageResolver {
     });
   }
 
-  private async getSupportLanguages(fsPath?: string) {
-    const prettierInstance = await this.moduleResolver.getPrettierInstance(
-      fsPath
-    );
-    const languages = prettierInstance.getSupportInfo().languages;
-
+  private async getSupportLanguages() {
     const hLang = this.createLanguage(Handlebars, () => ({
       since: null,
       parsers: ["glimmer"],
       vscodeLanguageIds: ["handlebars"],
     }));
-    languages.push(hLang);
 
-    return languages;
+    return [hLang];
   }
 
+  // Copied from https://github.com/prettier/prettier/blob/master/src/utils/create-language.js
   private createLanguage(
     linguistData: { [x: string]: any; languageId: any },
     override: {
