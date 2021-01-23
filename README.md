@@ -1,38 +1,10 @@
-# Prettier Formatter for Visual Studio Code
+# Prettier Formatter for Visual Studio Code (For Handlebars)
 
 [Prettier](https://prettier.io/) is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
 <p align="center">
   <em>
-    JavaScript
-    · TypeScript
-    · Flow
-    · JSX
-    · JSON
-  </em>
-  <br />
-  <em>
-    CSS
-    · SCSS
-    · Less
-  </em>
-  <br />
-  <em>
-    HTML
-    · Vue
-    · Angular
-  </em>
-  <br />
-  <em>
-    GraphQL
-    · Markdown
-    · YAML
-  </em>
-  <br />
-  <em>
-    <a href="https://prettier.io/docs/en/plugins.html">
-      Your favorite language?
-    </a>
+    Handlebars
   </em>
 </p>
 
@@ -51,9 +23,9 @@
 
 ## Installation
 
-Install through VS Code extensions. Search for `Prettier - Code formatter`
+Install through VS Code extensions. Search for `Prettier - Code formatter (For Handlebars)`
 
-[Visual Studio Code Market Place: Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+[Visual Studio Code Market Place: Prettier - Code formatter (For Handlebars)](https://marketplace.visualstudio.com/items?itemName=ember-tooling.prettier-vscode-handlebars)
 
 Can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 
@@ -68,7 +40,7 @@ To ensure that this extension is used over other extensions you may have install
 ```json
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
+  "[handlebars]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
@@ -137,7 +109,7 @@ You can turn on format-on-save on a per-language basis by scoping the setting:
 // Set the default
 "editor.formatOnSave": false,
 // Enable per-language
-"[javascript]": {
+"[handlebars]": {
     "editor.formatOnSave": true
 }
 ```
@@ -147,12 +119,6 @@ You can turn on format-on-save on a per-language basis by scoping the setting:
 Format selection works on several languages depending on what Prettier itself supports. The following languages currently are supported:
 
 ```
-javascript
-javascriptreact
-typescript
-typescriptreact
-json
-graphql
 ```
 
 ## Linter Integration
